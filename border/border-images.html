@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border-images</title>
+    <style>
+        body{
+            font-family: fantasy;
+            text-align: center
+        }
+        #bitmap { 
+            border: 30px solid transparent;
+            padding: 10px;
+            border-image: url("border.png") 40;
+        }
+        #gradient { 
+            border: 5px solid;
+            border-image: linear-gradient(rgb(166, 204, 165), yellow) 10 10 repeat;
+            padding: 20px;
+            outline:red solid 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bitmap">The image is stretched to fill the area.</div>
+    <hr>
+    <h4>渐变</h4>
+    <div id="gradient">The image is stretched to fill the area.</div>
+</body>
+</html>
